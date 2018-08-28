@@ -1,5 +1,6 @@
 /*
 文件名：cubedata.h
+prupose: basic cube structure
 用途：定义魔方的基础数据结构
  */
 
@@ -9,6 +10,7 @@
 
 #include <stdio.h>
 
+//An enum of cube color. opposite surface use opposite number. zero for no color surface of the blocks.
 typedef enum CubeColor
 {
     blue = -3,
@@ -24,6 +26,10 @@ typedef enum CubeColor
 }CubeColor;
 //一个块，包含2-3个面
 //只标记有颜色的面，空白面为nullcolor
+//Prupose :data structure for each block.
+//Introduction: Including 3 surfaces and the color of each surface.
+//1st line of the array is the number of the surface, and the 2nd line of the array is the color of the certain surface.
+//For example: a[1][0] is the 1st surface and a[1][1] is the color of this block.
 typedef struct Block
 {
     CubeColor arrColor[3][2];
