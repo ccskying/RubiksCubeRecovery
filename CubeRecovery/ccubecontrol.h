@@ -1,3 +1,4 @@
+//Purpose: this file defines the fuctions in order to translate the solving algorithm into basic operations.
 //魔方控制函数
 //旋转面，旋转整个魔方
 #ifndef CCUBECONTROL_H
@@ -6,8 +7,10 @@
 #include "cubeoperations.h"
 
 //初始化魔方
+//This function initiates the cube
 static bool InitCube(Cube *pCubeData);
 //初始化操作函数列表
+//This function initiates the list of the functions of basic operations.
 static bool InitFunctionList(bool (*pFun[18])(Cube*));
 
 static bool R(Cube *pCubeData);

@@ -1,15 +1,18 @@
 /*
-这个头文件用于定义单面旋转函数
+ * Purpose: turn the arrat which saving the data of one surface of the cube 90° clockwise or anticlockwise
+ * 这个头文件用于定义单面旋转函数
 */
 #ifndef ARRAYOPERATE_H
 #define ARRAYOPERATE_H
 
 #include "cubedata.h"
 
-static void ArrTurnLeft(Block arrCube[3][3]);
-static void ArrTurnRight(Block arrCube[3][3]);
+//clockwide
+static void ArrTurnCW(Block arrCube[3][3]);
+//anticlockwide
+static void ArrTurnACW(Block arrCube[3][3]);
 
-void ArrTurnLeft(Block arrCube[3][3])
+void ArrTurnCW(Block arrCube[3][3])
 {
     Block arrTmp[3][3];
     for(int i = 0; i < 3; i++)
@@ -27,7 +30,7 @@ void ArrTurnLeft(Block arrCube[3][3])
         }
     }
 }
-void ArrTurnRight(Block arrCube[3][3])
+void ArrTurnACW(Block arrCube[3][3])
 {
     Block arrTmp[3][3];
     for(int i = 0; i < 3; i++)

@@ -46,7 +46,7 @@ bool redTurn(Cube *pCubeData)
             arrTmp[i][j] = pCubeData->arrCube[i][j][2];
         }
     }
-    ArrTurnRight(arrTmp);
+    ArrTurnACW(arrTmp);
     for(int i = 0; i < 3; i++)
     {
         for(int j = 0; j < 3; j++)
@@ -81,7 +81,7 @@ bool greenTrun(Cube *pCubeData)
             arrTmp[i][j] = pCubeData->arrCube[2][i][j];
         }
     }
-    ArrTurnRight(arrTmp);
+    ArrTurnACW(arrTmp);
     for(int i = 0; i < 3; i++)
     {
         for(int j = 0; j < 3; j++)
@@ -115,7 +115,7 @@ bool yellowTurn(Cube *pCubeData)
             arrTmp[i][j] = pCubeData->arrCube[i][2][j];
         }
     }
-    ArrTurnRight(arrTmp);
+    ArrTurnACW(arrTmp);
     for(int i = 0; i < 3; i++)
     {
         for(int j = 0; j < 3; j++)
@@ -149,7 +149,7 @@ bool orangeTurn(Cube *pCubeData)
             arrTmp[i][j] = pCubeData->arrCube[i][j][0];
         }
     }
-    ArrTurnRight(arrTmp);
+    ArrTurnACW(arrTmp);
     for(int i = 0; i < 3; i++)
     {
         for(int j = 0; j < 3; j++)
@@ -183,7 +183,7 @@ bool blueTurn(Cube *pCubeData)
             arrTmp[i][j] = pCubeData->arrCube[0][i][j];
         }
     }
-    ArrTurnRight(arrTmp);
+    ArrTurnACW(arrTmp);
     for(int i = 0; i < 3; i++)
     {
         for(int j = 0; j < 3; j++)
@@ -217,7 +217,7 @@ bool whiteTurn(Cube *pCubeData)
             arrTmp[i][j] = pCubeData->arrCube[i][0][j];
         }
     }
-    ArrTurnRight(arrTmp);
+    ArrTurnACW(arrTmp);
     for(int i = 0; i < 3; i++)
     {
         for(int j = 0; j < 3; j++)
@@ -253,7 +253,7 @@ bool redTurnB(Cube *pCubeData)
             arrTmp[i][j] = pCubeData->arrCube[i][j][2];
         }
     }
-    ArrTurnLeft(arrTmp);
+    ArrTurnCW(arrTmp);
     for(int i = 0; i < 3; i++)
     {
         for(int j = 0; j < 3; j++)
@@ -288,7 +288,7 @@ bool greenTrunB(Cube *pCubeData)
             arrTmp[i][j] = pCubeData->arrCube[2][i][j];
         }
     }
-    ArrTurnLeft(arrTmp);
+    ArrTurnCW(arrTmp);
     for(int i = 0; i < 3; i++)
     {
         for(int j = 0; j < 3; j++)
@@ -322,7 +322,7 @@ bool yellowTurnB(Cube *pCubeData)
             arrTmp[i][j] = pCubeData->arrCube[i][2][j];
         }
     }
-    ArrTurnLeft(arrTmp);
+    ArrTurnCW(arrTmp);
     for(int i = 0; i < 3; i++)
     {
         for(int j = 0; j < 3; j++)
@@ -356,7 +356,7 @@ bool orangeTurnB(Cube *pCubeData)
             arrTmp[i][j] = pCubeData->arrCube[i][j][0];
         }
     }
-    ArrTurnLeft(arrTmp);
+    ArrTurnCW(arrTmp);
     for(int i = 0; i < 3; i++)
     {
         for(int j = 0; j < 3; j++)
@@ -390,7 +390,7 @@ bool blueTurnB(Cube *pCubeData)
             arrTmp[i][j] = pCubeData->arrCube[0][i][j];
         }
     }
-    ArrTurnLeft(arrTmp);
+    ArrTurnCW(arrTmp);
     for(int i = 0; i < 3; i++)
     {
         for(int j = 0; j < 3; j++)
@@ -424,7 +424,7 @@ bool whiteTurnB(Cube *pCubeData)
             arrTmp[i][j] = pCubeData->arrCube[i][0][j];
         }
     }
-    ArrTurnLeft(arrTmp);
+    ArrTurnCW(arrTmp);
     for(int i = 0; i < 3; i++)
     {
         for(int j = 0; j < 3; j++)
