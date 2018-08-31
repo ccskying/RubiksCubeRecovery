@@ -1,6 +1,8 @@
 #ifndef CUBEOPERATIONS_H
 #define CUBEOPERATIONS_H
 
+//Purpose: this file defines basic operations of the cube.
+
 #include <stdbool.h>
 #include <stdlib.h>
 #include <memory.h>
@@ -8,7 +10,17 @@
 #include "cubedata.h"
 #include "arrayoperate.h"
 
+/*Attention: a function called xxxTurn() means turn the surface of the cube which is in this color 90° clockwise.
+//          Samely as the fuctions called xxxTurnB(), they means to turn it 90° anticlockwise.
+//          The clockwise moving is based on the location when the surface is the front surface of the cube.
+//
+//  all of the functions in this file follows the same input and output data type
+//
+//  Input: data in the type of "Cube".
+//  Output: whether it execute successful or not. Return ture if it success.
+//
 //操作函数
+*/
 static bool redTurn(Cube *pCubeData);
 static bool greenTrun(Cube *pCubeData);
 static bool yellowTurn(Cube *pCubeData);
