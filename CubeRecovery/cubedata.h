@@ -26,7 +26,7 @@ typedef enum CubeColor
 }CubeColor;
 //一个块，包含2-3个面
 //只标记有颜色的面，空白面为nullcolor
-//Prupose :data structure for each block.
+//Prupose: data structure for each block.
 //Introduction: Including 3 surfaces and the color of each surface.
 //1st line of the array is the number of the surface, and the 2nd line of the array is the color of the certain surface.
 //For example: a[1][0] is the 1st surface and a[1][1] is the color of this block.
@@ -44,6 +44,11 @@ typedef struct Block
 //标记三个面是为了简化算法，在需要查找面时可以直接取反找到对面
 //这三个面用于确定执行公式的坐标
 //魔方摆放的坐标始终不变，这样不需要动三维数组的坐标系
+/*Prupose: comperhensive data structure of a cube
+ * Three CubeColor datas make the certain moveable coordinate axis.
+ * And the basic unmoveable coordinate axis is red in fromt of the cube, yellow on the top.
+ * The array of Blocks save the 26 blocks' data of the cube
+*/
 typedef struct Cube{
     CubeColor TopColor;
     CubeColor FromtColor;
@@ -53,7 +58,7 @@ typedef struct Cube{
 }Cube;
 
 
-
+//end of the file(lines after this line is garbage)
 
 
 //一个方块的面
