@@ -444,6 +444,7 @@ bool whiteTurnB(Cube *pCubeData)
 
         }
     }
+    return true;
 }
 
 #endif // CUBEOPERATIONS_H

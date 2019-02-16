@@ -6,6 +6,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    pEditOpLog = this->findChild<QTextEdit*>("EditOpLog");
+    pEditOpLog->insertPlainText("Operations: ");
     //初始化魔方
     bool bInitSuc = false;
     bInitSuc = InitCube(&CubeData);
@@ -24,15 +26,19 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_Bt_ShowCube_clicked()
+void MainWindow::WriteOperationLog(QString strOperation)
 {
-    ui->tableWidget->ShowCube(&CubeData);
-}
+    static int nInit = 0;
+    if(strOperation.compare("Initialization") == 0)
+    {
+        nInit++;
+        pEditOpLog->insertPlainText("\n" + strOperation + " "+ QString::number(nInit) + " ======================\n" + "Operations:");
+    }else {
+        pEditOpLog->insertPlainText(strOperation + " | ");
+    }
+    pEditOpLog->moveCursor(QTextCursor::End);
 
-void MainWindow::on_Bt_InitCube_clicked()
-{
-    InitCube(&CubeData);
-    ui->tableWidget->ShowCube(&CubeData);
+
 }
 
 QString MainWindow::ColorToQString(CubeColor BlockColor)
@@ -71,12 +77,26 @@ void MainWindow::InitCubeCoordinate(Cube CubeData)
     ui->RightLabel->setText(ColorToQString(CubeData.RightColor));
 }
 
+
+void MainWindow::on_Bt_ShowCube_clicked()
+{
+    ui->tableWidget->ShowCube(&CubeData);
+}
+
+void MainWindow::on_Bt_InitCube_clicked()
+{
+    InitCube(&CubeData);
+    ui->tableWidget->ShowCube(&CubeData);
+    WriteOperationLog("Initialization");
+}
+
 //////////////////////////////////////////////////////////
 
 void MainWindow::on_Bt_TurnR_clicked()
 {
     R(&CubeData);
     ui->tableWidget->ShowCube(&CubeData);
+    WriteOperationLog("R");
 }
 
 void MainWindow::on_Bt_TurnF_clicked()

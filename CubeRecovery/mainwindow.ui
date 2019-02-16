@@ -7,11 +7,11 @@
     <x>0</x>
     <y>0</y>
     <width>869</width>
-    <height>586</height>
+    <height>711</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>主界面</string>
+   <string>Cube recover</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="CCubeTableWig" name="tableWidget">
@@ -34,19 +34,19 @@
      </rect>
     </property>
     <property name="title">
-     <string>操作</string>
+     <string>operation</string>
     </property>
     <widget class="QPushButton" name="Bt_ShowCube">
      <property name="geometry">
       <rect>
        <x>10</x>
        <y>20</y>
-       <width>75</width>
+       <width>101</width>
        <height>23</height>
       </rect>
      </property>
      <property name="text">
-      <string>刷新状态</string>
+      <string>refresh cube</string>
      </property>
     </widget>
     <widget class="QPushButton" name="Bt_TurnR">
@@ -106,12 +106,12 @@
       <rect>
        <x>10</x>
        <y>50</y>
-       <width>75</width>
+       <width>101</width>
        <height>23</height>
       </rect>
      </property>
      <property name="text">
-      <string>初始化魔方</string>
+      <string>Initialize cube</string>
      </property>
     </widget>
     <widget class="QPushButton" name="Bt_TurnU">
@@ -346,7 +346,7 @@
      </rect>
     </property>
     <property name="title">
-     <string>状态</string>
+     <string>coordinate</string>
     </property>
     <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
@@ -361,7 +361,7 @@
       <item row="0" column="0">
        <widget class="QLabel" name="label">
         <property name="text">
-         <string>正面：</string>
+         <string>front：</string>
         </property>
        </widget>
       </item>
@@ -375,7 +375,7 @@
       <item row="1" column="0">
        <widget class="QLabel" name="label_2">
         <property name="text">
-         <string>顶面：</string>
+         <string>top：</string>
         </property>
        </widget>
       </item>
@@ -389,7 +389,7 @@
       <item row="2" column="0">
        <widget class="QLabel" name="label_3">
         <property name="text">
-         <string>右面：</string>
+         <string>right：</string>
         </property>
        </widget>
       </item>
@@ -402,6 +402,22 @@
       </item>
      </layout>
     </widget>
+   </widget>
+   <widget class="QTextEdit" name="EditOpLog">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>520</y>
+      <width>841</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 24pt &quot;Adobe Arabic&quot;;</string>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">

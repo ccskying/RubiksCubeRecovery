@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QMessageBox.h>
+#include <QTextEdit>
 #include "ccubecontrol.h"
 
 namespace Ui {
@@ -15,16 +16,22 @@ class MainWindow : public QMainWindow
 
 public:
     Cube CubeData;
+    QTextEdit* pEditOpLog;//operation log
 
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
 private slots:
-    void on_Bt_ShowCube_clicked();
-    void on_Bt_InitCube_clicked();
+    void WriteOperationLog(QString strOperation);
     QString ColorToQString(CubeColor BlockColor);
     void InitCubeCoordinate(Cube CubeData);
 
+    void on_Bt_ShowCube_clicked();
+    void on_Bt_InitCube_clicked();
+    //purpose: to initialize a cube use random operations.
+    //input: n: use how many operaions to initialize a random cube.
+    void InitCube_Random(int n);undifined
+    //operations
     void on_Bt_TurnR_clicked();
     void on_Bt_TurnF_clicked();
     void on_Bt_TurnD_clicked();
